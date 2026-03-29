@@ -81,7 +81,7 @@ const FilmSection = () => {
     <section
       ref={sectionRef}
       id="films"
-      className="py-20 sm:py-24 md:py-32 lg:py-40 bg-[#0a0a0a]"
+      className="pt-10 pb-8 sm:pt-12 sm:pb-10 md:pt-16 md:pb-12 bg-[#0a0a0a]"
     >
       <div className="section-container">
         {/* Section Header with Stats */}

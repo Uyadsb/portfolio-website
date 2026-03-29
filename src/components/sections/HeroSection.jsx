@@ -28,7 +28,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center pt-20 pb-32">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center pt-16 pb-16 sm:pt-20 sm:pb-20">
         {/* Trusted Badge */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -76,10 +76,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.4 }}
-          className="mt-7 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-6"
+          className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row items-center gap-5 sm:gap-8"
         >
           {/* Play Showreel Group */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-4">
             <button
               onClick={() => setShowReel(true)}
               className="play-btn group"
@@ -97,7 +97,7 @@ const HeroSection = () => {
               e.preventDefault();
               document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="kolder-btn kolder-btn-outline text-xs sm:text-sm py-3 px-5 sm:py-3.5 sm:px-6"
+            className="kolder-btn kolder-btn-outline text-xs sm:text-sm py-3 px-6 sm:py-3.5 sm:px-8"
           >
             View Work
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,16 +111,16 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.4 }}
-          className="absolute bottom-16 sm:bottom-20 md:bottom-24 left-0 right-0 flex justify-center px-4"
+          className="mt-12 sm:mt-16 md:mt-20"
         >
-          <div className="flex items-center gap-6 sm:gap-10 md:gap-16">
+          <div className="flex items-center justify-center gap-10 sm:gap-14 md:gap-20">
             {[
               { number: '150+', label: 'Projects' },
               { number: '8+', label: 'Years' },
               { number: '50M+', label: 'Views' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-xl sm:text-2xl md:text-4xl font-display text-white">{stat.number}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-display text-white">{stat.number}</div>
                 <div className="text-[9px] sm:text-[10px] md:text-xs tracking-wider uppercase text-[#666] mt-1">{stat.label}</div>
               </div>
             ))}

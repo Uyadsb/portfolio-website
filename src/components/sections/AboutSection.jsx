@@ -60,7 +60,7 @@ const AboutSection = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="py-20 sm:py-24 md:py-32 lg:py-40 bg-[#0a0a0a] relative overflow-visible"
+      className="pt-10 pb-8 sm:pt-12 sm:pb-10 md:pt-16 md:pb-12 bg-[#0a0a0a] relative overflow-visible"
     >
       <div className="section-container">
         {/* Section Header */}
@@ -68,18 +68,18 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-12 sm:mb-16 md:mb-20 text-center"
+          className="mb-8 sm:mb-10 md:mb-12 text-center"
         >
           <span className="section-label">
             About Me
           </span>
-          <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-3 sm:mt-4 text-white uppercase">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display tracking-wider mt-2 sm:mt-3 text-white uppercase">
             The Storyteller
           </h2>
         </motion.div>
 
         {/* Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-start mb-20 sm:mb-24 md:mb-28">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start mb-12 sm:mb-14 md:mb-16">
           {/* Image Side */}
           <motion.div
             style={{ y: imageY }}
@@ -121,7 +121,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="order-1 lg:order-2"
           >
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display tracking-wider text-white mb-5 sm:mb-6 md:mb-8 uppercase">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-display tracking-wider text-white mb-4 sm:mb-5 uppercase">
               Capturing Emotions,{' '}
               <span className="text-[#00e5c0]">Creating Connections</span>
             </h3>
@@ -175,9 +175,9 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-20 sm:mb-24 md:mb-28"
+          className="mb-12 sm:mb-14 md:mb-16"
         >
-          <h3 className="text-xl sm:text-2xl font-display tracking-wider text-white uppercase text-center mb-10 sm:mb-12 md:mb-14">
+          <h3 className="text-lg sm:text-xl font-display tracking-wider text-white uppercase text-center mb-6 sm:mb-8">
             What Clients Say
           </h3>
           
@@ -215,7 +215,7 @@ const AboutSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h3 className="text-xl sm:text-2xl font-display tracking-wider text-white uppercase text-center mb-10 sm:mb-12 md:mb-14">
+          <h3 className="text-lg sm:text-xl font-display tracking-wider text-white uppercase text-center mb-6 sm:mb-8">
             Frequently Asked Questions
           </h3>
           

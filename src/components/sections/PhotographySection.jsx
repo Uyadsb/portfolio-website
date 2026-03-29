@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 
 const PhotographySection = () => {
@@ -82,19 +82,50 @@ const PhotographySection = () => {
     setSelectedIndex(index);
   };
 
-  const navigateLightbox = (direction) => {
+  const navigateLightbox = useCallback((direction) => {
     const newIndex = direction === 'next' 
       ? (selectedIndex + 1) % filteredPhotos.length
       : (selectedIndex - 1 + filteredPhotos.length) % filteredPhotos.length;
     setSelectedIndex(newIndex);
     setSelectedPhoto(filteredPhotos[newIndex]);
-  };
+  }, [selectedIndex, filteredPhotos]);
+
+  // Keyboard navigation for lightbox
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!selectedPhoto) return;
+      
+      switch (e.key) {
+        case 'Escape':
+          setSelectedPhoto(null);
+          break;
+        case 'ArrowLeft':
+          navigateLightbox('prev');
+          break;
+        case 'ArrowRight':
+          navigateLightbox('next');
+          break;
+        default:
+          break;
+      }
+    };
+
+    if (selectedPhoto) {
+      document.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedPhoto, navigateLightbox]);
 
   return (
     <section
       ref={sectionRef}
       id="photos"
-      className="py-20 sm:py-24 md:py-32 lg:py-40 bg-[#0a0a0a]"
+      className="pt-10 pb-8 sm:pt-12 sm:pb-10 md:pt-16 md:pb-12 bg-[#0a0a0a]"
     >
       <div className="section-container">
         {/* Section Header */}
@@ -309,6 +340,12 @@ const PhotographySection = () => {
             {/* Counter */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm tracking-widest text-[#6b6b6b] font-display">
               {selectedIndex + 1} / {filteredPhotos.length}
+            </div>
+
+            {/* Keyboard hints */}
+            <div className="absolute bottom-4 right-4 text-xs tracking-wider text-[#6b6b6b]/50 hidden md:flex gap-4">
+              <span>← → Navigate</span>
+              <span>ESC Close</span>
             </div>
           </motion.div>
         )}

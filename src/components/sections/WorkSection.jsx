@@ -47,7 +47,7 @@ const WorkSection = () => {
     <section
       ref={sectionRef}
       id="work"
-      className="py-20 sm:py-24 md:py-32 lg:py-40 bg-[#0a0a0a]"
+      className="pt-10 pb-8 sm:pt-12 sm:pb-10 md:pt-16 md:pb-12 bg-[#0a0a0a]"
     >
       <div className="section-container">
         {/* Section Header */}
@@ -126,28 +126,6 @@ const WorkSection = () => {
           </motion.a>
         ))}
         </div>
-
-        {/* Brands/Clients Row */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 sm:mt-20 md:mt-24 lg:mt-28 pt-10 sm:pt-12 md:pt-14 border-t border-[#1f1f1f]"
-        >
-          <p className="text-center text-[10px] md:text-xs tracking-[0.2em] uppercase text-[#6b6b6b] mb-8 md:mb-10">
-            Trusted By Leading Brands
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-16">
-            {['Nike', 'Apple', 'Netflix', 'Red Bull', 'GoPro', 'DJI'].map((brand) => (
-              <span
-                key={brand}
-                className="text-lg sm:text-xl md:text-2xl font-display tracking-wider text-[#3a3a3a] hover:text-white transition-colors duration-300 uppercase"
-              >
-                {brand}
-              </span>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
