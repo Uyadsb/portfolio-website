@@ -125,7 +125,7 @@ const PhotographySection = () => {
     <section
       ref={sectionRef}
       id="photos"
-      className="pt-10 pb-8 sm:pt-12 sm:pb-10 md:pt-16 md:pb-12 bg-[#0a0a0a]"
+      className="pt-4 pb-8 sm:pt-6 sm:pb-10 md:pt-6 md:pb-12 bg-[#0a0a0a]"
     >
       <div className="section-container">
         {/* Section Header */}
@@ -133,17 +133,17 @@ const PhotographySection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-10 sm:mb-12 md:mb-14"
+          className="mb-2 sm:mb-2 md:mb-4"
         >
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8">
             <div>
               <span className="section-label">
                 Gallery
               </span>
-              <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-3 sm:mt-4 text-white uppercase">
+              <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-display tracking-wider mt-1 sm:mt-2 text-white uppercase">
                 Photography
               </h2>
-              <p className="mt-4 sm:mt-5 text-[#6b6b6b] max-w-xl text-sm sm:text-base leading-relaxed">
+              <p className="mt-2 sm:mt-1 text-[#6b6b6b] max-w-xl text-sm sm:text-base leading-relaxed">
                 Frozen fragments of time. Each photograph holds a universe of emotion within a single frame.
               </p>
             </div>
@@ -167,7 +167,7 @@ const PhotographySection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-10 sm:mb-12"
+          className="mb-6 sm:mb-6"
         >
           <div className="flex flex-wrap gap-2.5 sm:gap-3">
             {filters.map((filter) => (
@@ -200,7 +200,7 @@ const PhotographySection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4 }}
-              className="relative break-inside-avoid mb-4 sm:mb-5 md:mb-6 group overflow-hidden rounded-xl md:rounded-2xl cursor-pointer bg-[#111111]"
+              className="relative break-inside-avoid mb-10 sm:mb-5 md:mb-8 group overflow-hidden rounded-xl md:rounded-2xl cursor-pointer bg-[#111111]"
               onClick={() => openLightbox(photo, index)}
               data-cursor-view
             >
@@ -355,3 +355,12 @@ const PhotographySection = () => {
 };
 
 export default PhotographySection;
+
+
+
+
+
+
+
+
+

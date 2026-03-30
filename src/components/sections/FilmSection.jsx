@@ -81,7 +81,7 @@ const FilmSection = () => {
     <section
       ref={sectionRef}
       id="films"
-      className="pt-10 pb-8 sm:pt-12 sm:pb-10 md:pt-16 md:pb-12 bg-[#0a0a0a]"
+      className="pt-6 pb-8 sm:pt-8 sm:pb-10 md:pt-10 md:pb-12 bg-[#0a0a0a]"
     >
       <div className="section-container">
         {/* Section Header with Stats */}
@@ -89,14 +89,14 @@ const FilmSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 sm:mb-12 md:mb-14"
+          className="flex flex-col md:flex-row md:justify-between md:items-end mb-5 sm:mb-6 md:mb-8"
         >
           <div>
             <p className="section-label mb-2 sm:mb-3">Portfolio</p>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-display tracking-wider text-white uppercase">
+            <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-display tracking-wider text-white uppercase">
               Film Work
             </h2>
-            <p className="mt-3 sm:mt-4 text-[#6b6b6b] max-w-lg text-sm sm:text-base leading-relaxed">
+            <p className="mt-2 sm:mt-3 text-[#6b6b6b] max-w-lg text-sm sm:text-base leading-relaxed">
               Every frame tells a story. Every cut builds emotion. Welcome to my visual narratives.
             </p>
           </div>
@@ -119,7 +119,7 @@ const FilmSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-10 sm:mb-12"
+          className="mb-5 sm:mb-6"
         >
           <div className="flex flex-wrap gap-2.5 sm:gap-3">
             {filters.map((filter) => (
@@ -199,14 +199,14 @@ const FilmSection = () => {
 
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
-                    <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                    <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-8">
                       <span className="bg-[#00e5c0] text-[#0a0a0a] px-2 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-[10px] tracking-widest uppercase font-bold rounded-full">
                         {filteredFilms[0].category}
                       </span>
                       <span className="text-[#6b6b6b] text-[10px] sm:text-xs">•</span>
                       <span className="text-[#6b6b6b] text-[10px] sm:text-xs">{filteredFilms[0].duration}</span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display tracking-wider text-white uppercase font-bold">
+                    <h3 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl font-display tracking-wider text-white uppercase font-bold">
                       {filteredFilms[0].title}
                     </h3>
                   </div>
@@ -428,3 +428,12 @@ const FilmSection = () => {
 };
 
 export default FilmSection;
+
+
+
+
+
+
+
+
+

@@ -47,7 +47,7 @@ const WorkSection = () => {
     <section
       ref={sectionRef}
       id="work"
-      className="pt-10 pb-8 sm:pt-12 sm:pb-10 md:pt-16 md:pb-12 bg-[#0a0a0a]"
+      className="pt-6 pb-8 sm:pt-8 sm:pb-10 md:pt-10 md:pb-12 bg-[#0a0a0a]"
     >
       <div className="section-container">
         {/* Section Header */}
@@ -55,15 +55,15 @@ const WorkSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-12 sm:mb-16 md:mb-20 text-center"
+          className="mb-6 sm:mb-8 md:mb-10 text-center"
         >
           <span className="section-label">
             What I Do
           </span>
-          <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-3 sm:mt-4 text-white uppercase">
+          <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-display tracking-wider mt-2 sm:mt-3 text-white uppercase">
             Creative Services
           </h2>
-          <p className="mt-4 sm:mt-6 text-[#6b6b6b] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed px-4 sm:px-0">
+          <p className="mt-3 sm:mt-4 text-[#6b6b6b] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed px-4 sm:px-0">
             I help brands and creators tell their stories through cinematic visuals.
             From concept to final delivery, every project receives the attention it deserves.
           </p>
@@ -104,12 +104,12 @@ const WorkSection = () => {
               <h3 className="text-xl md:text-2xl font-display tracking-wider text-white mt-2 md:mt-2.5 uppercase group-hover:text-[#00e5c0] transition-colors">
                 {service.title}
               </h3>
-              <p className="mt-2.5 md:mt-3 text-xs md:text-sm text-[#6b6b6b] leading-relaxed line-clamp-2">
+              <p className="mt-2.5 md:mt-6 text-xs md:text-sm text-[#6b6b6b] leading-relaxed line-clamp-2">
                 {service.description}
               </p>
               
               {/* Arrow */}
-              <div className="mt-4 md:mt-5 flex items-center gap-2 text-[#6b6b6b] group-hover:text-white transition-colors">
+              <div className="mt-8 md:mt-5 flex items-center gap-2 text-[#6b6b6b] group-hover:text-white transition-colors">
                 <span className="text-[10px] md:text-xs tracking-widest uppercase">Explore</span>
                 <motion.svg 
                   className="w-3.5 h-3.5 md:w-4 md:h-4"
@@ -132,3 +132,12 @@ const WorkSection = () => {
 };
 
 export default WorkSection;
+
+
+
+
+
+
+
+
+

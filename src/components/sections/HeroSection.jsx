@@ -8,38 +8,38 @@ const HeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen w-full overflow-hidden bg-[#0a0a0a] -mt-16"
+      className="relative min-h-screen w-full overflow-hidden bg-[#0a0a0a]"
       id="hero"
     >
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          className="absolute inset-0 w-full h-full bg-cover bg-center blur-[2px]"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1920&q=80)',
           }}
         />
         
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-[#0a0a0a]/70" />
+        <div className="absolute inset-0 bg-[#0a0a0a]/40" />
         
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/50 via-transparent to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a0a0a]" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center pt-16 pb-16 sm:pt-20 sm:pb-20">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center pt-20 pb-16 sm:pt-24 sm:pb-20">
         {/* Trusted Badge */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.4 }}
-          className="trusted-badge mb-5 sm:mb-6"
+          className="trusted-badge mb-6 sm:mb-6"
         >
           <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#00e5c0]" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
           </svg>
-          <span>Trusted by 50+ Brands Worldwide</span>
+          <span className="text-[#bbb]">Trusted by 50+ Brands Worldwide</span>
         </motion.div>
 
         {/* Main Title */}
@@ -47,7 +47,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.5 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display tracking-wide text-white leading-[1] uppercase"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display tracking-wide text-white leading-[1] uppercase"
         >
           Visual Storytelling
         </motion.h1>
@@ -56,7 +56,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display tracking-wide leading-[1] uppercase mt-1 sm:mt-2"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display tracking-wide leading-[1] uppercase -mt-5 sm:-mt-4"
         >
           <span className="text-[#00e5c0]">That Captivates</span>
         </motion.h1>
@@ -66,7 +66,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.4 }}
-          className="mt-5 sm:mt-6 md:mt-8 text-xs sm:text-sm tracking-[0.1em] sm:tracking-[0.15em] uppercase text-[#888] max-w-xs sm:max-w-md md:max-w-xl"
+          className="mt-5 sm:mt-6 md:mt-6 text-xs sm:text-sm tracking-[0.1em] sm:tracking-[0.15em] uppercase text-[#bbb] max-w-xs sm:max-w-md md:max-w-xl"
         >
           Filmmaker & Creative Director helping brands tell their stories through cinematic visuals
         </motion.p>
@@ -76,7 +76,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.4 }}
-          className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row items-center gap-5 sm:gap-8"
+          className="mt-6 sm:mt-10 md:mt-8 flex flex-col sm:flex-row items-center gap-5 sm:gap-8"
         >
           {/* Play Showreel Group */}
           <div className="flex items-center gap-4">
@@ -88,7 +88,7 @@ const HeroSection = () => {
                 <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
               </svg>
             </button>
-            <span className="text-xs sm:text-sm tracking-wider text-[#888] uppercase">Showreel</span>
+            <span className="text-xs sm:text-sm tracking-wider text-[#bbb] uppercase">Showreel</span>
           </div>
           
           <a
@@ -100,7 +100,7 @@ const HeroSection = () => {
             className="kolder-btn kolder-btn-outline text-xs sm:text-sm py-3 px-6 sm:py-3.5 sm:px-8"
           >
             View Work
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </a>
@@ -111,9 +111,9 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.4 }}
-          className="mt-12 sm:mt-16 md:mt-20"
+          className="mt-6 sm:mt-8 md:mt-6"
         >
-          <div className="flex items-center justify-center gap-10 sm:gap-14 md:gap-20">
+          <div className="flex items-center justify-center gap-6 sm:gap-8 md:gap-20">
             {[
               { number: '150+', label: 'Projects' },
               { number: '8+', label: 'Years' },
@@ -121,7 +121,7 @@ const HeroSection = () => {
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-display text-white">{stat.number}</div>
-                <div className="text-[9px] sm:text-[10px] md:text-xs tracking-wider uppercase text-[#666] mt-1">{stat.label}</div>
+                <div className="text-[9px] sm:text-[10px] md:text-xs tracking-wider uppercase text-[#999] mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -186,3 +186,12 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+
+
+
+
+
+
+

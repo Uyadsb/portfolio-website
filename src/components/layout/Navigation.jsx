@@ -49,10 +49,7 @@ const Navigation = () => {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' }}
+      <nav
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
           isScrolled ? 'glass-nav py-2 sm:py-3' : 'py-3 sm:py-4 bg-transparent'
         }`}
@@ -143,7 +140,7 @@ const Navigation = () => {
             />
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>
